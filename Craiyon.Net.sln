@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Craiyon.Net", "Craiyon.Net\Craiyon.Net.csproj", "{3D7CD1D6-8786-4DFD-9E8D-3293AD36D751}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Craiyon.Net.Tests", "Craiyon.Net.Tests\Craiyon.Net.Tests.csproj", "{535CF80C-250B-4410-BC67-5C581819E6DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D7CD1D6-8786-4DFD-9E8D-3293AD36D751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D7CD1D6-8786-4DFD-9E8D-3293AD36D751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D7CD1D6-8786-4DFD-9E8D-3293AD36D751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D7CD1D6-8786-4DFD-9E8D-3293AD36D751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{535CF80C-250B-4410-BC67-5C581819E6DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{535CF80C-250B-4410-BC67-5C581819E6DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{535CF80C-250B-4410-BC67-5C581819E6DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{535CF80C-250B-4410-BC67-5C581819E6DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CDDAC88-B487-4A17-AD7C-107976DB93C0}
+	EndGlobalSection
+EndGlobal
