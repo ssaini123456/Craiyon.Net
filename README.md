@@ -14,7 +14,7 @@ namespace Craiyon.Net.Tests
         {
             
             Console.WriteLine("Generating Image...");
-            var craiyonService = new CraiyonService(4);
+            var craiyonService = new CraiyonService(4); // The index of the image from the image gallery.
 
             try
             {
