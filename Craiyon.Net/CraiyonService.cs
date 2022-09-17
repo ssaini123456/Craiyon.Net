@@ -7,6 +7,7 @@ namespace Craiyon.Net
     public class CraiyonService
     {
         private int _count;
+        private int _timeSpan = 60 * 5; // 5 minutes
         private string _base_url = "https://backend.craiyon.com/generate";
 
         private class Craiyon
@@ -58,7 +59,7 @@ namespace Craiyon.Net
             HttpResponseMessage respAsync = null;
             using (var client = new HttpClient())
             {
-                client.Timeout = TimeSpan.FromSeconds(60 * 60 * 3);
+                client.Timeout = TimeSpan.FromSeconds(_timeSpan);
                 respAsync = await client.PostAsync(_base_url, requestHeaders);
             }
 
