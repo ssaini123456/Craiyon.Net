@@ -8,7 +8,7 @@ namespace Craiyon.Net.Tests
         {
             
             Console.WriteLine("Generating Image...");
-            var craiyonService = new CraiyonService(4);
+            var craiyonService = new CraiyonService(1); // Get the 2nd image within the image gallery.
 
             try
             {

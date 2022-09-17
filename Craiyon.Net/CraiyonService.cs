@@ -6,8 +6,8 @@ namespace Craiyon.Net
 {
     public class CraiyonService
     {
-        private int _count;
         private int _timeSpan = 60 * 5; // 5 minutes
+        private int _galleryIndex = 0;
         private string _base_url = "https://backend.craiyon.com/generate";
 
         private class Craiyon
@@ -18,9 +18,9 @@ namespace Craiyon.Net
         /// <summary>
         /// Craiyon is an AI based Image Generation Service that uses DALL-E.
         /// </summary>
-        /// <param name="count">The amount of images to download. The max is 6.</param>
-        public CraiyonService(int count) {
-            _count = count;
+        /// <param name="galleryIndex">The index within the image gallery you would like to download.</param>
+        public CraiyonService(int galleryIndex) {
+            _galleryIndex = galleryIndex;
         }
 
         private async Task DataUrlToImageAsync(string b64_Data, string path)
@@ -31,24 +31,18 @@ namespace Craiyon.Net
 
         /// <summary>
         /// Generate creates a non-blocking call to craiyon, and downloads images from the response.
-        /// The amount of images downloaded depends on what <i>count</i> is set to.
         /// </summary>
-        /// <param name="prompt"></param>
+        /// <param name="prompt">The prompt you would like craiyon to generate on.</param>
+        /// <param name="path">The pat to save the image to.</param>
         /// <returns></returns>
         /// <exception cref="CraiyonCountOutOfBounds"></exception>
         /// <exception cref="CraiyonInvalidPrompt"></exception>
         public async Task Generate(string prompt, string path)
         {
-            if (_count > 6)
-            {
-                throw new CraiyonCountOutOfBounds();
-            }
-
             if (prompt == null)
             {
                 throw new CraiyonInvalidPrompt();
             }
-
 
             Craiyon c = new Craiyon();
             c.prompt = prompt;
@@ -67,11 +61,8 @@ namespace Craiyon.Net
 
             JObject gallery = JObject.Parse(responseString);
 
-            for(int i = 0; i < _count; i++)
-            {
-                var strippedImage = $"{gallery["images"][i]}";
-                await DataUrlToImageAsync(strippedImage, path);
-            }
+            var strippedImage = $"{gallery["images"][_galleryIndex]}";
+            await DataUrlToImageAsync(strippedImage, path);
         }
     }
 }
