@@ -9,7 +9,7 @@
     <Copyright>Sutinder S. Saini</Copyright>
     <PackageProjectUrl>https://github.com/sa111n111/Craiyon.Net</PackageProjectUrl>
     <PackageIcon>icon.jpg</PackageIcon>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReadmeFile></PackageReadmeFile>
     <RepositoryUrl>https://github.com/sa111n111/Craiyon.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackAsTool>False</PackAsTool>
@@ -21,10 +21,6 @@
 
   <ItemGroup>
     <None Include="..\LICENSE.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
