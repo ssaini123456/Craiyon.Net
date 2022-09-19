@@ -15,8 +15,6 @@
     <PackAsTool>False</PackAsTool>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
-    <Title>DotNetCraiyon</Title>
-    <AssemblyName>DotNetCraiyon</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
