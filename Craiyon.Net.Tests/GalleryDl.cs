@@ -2,7 +2,7 @@
 
 namespace Craiyon.Net.Tests
 {
-    public class Dl
+    public class ImageDl
     {
         public static async Task Main(string[] args)
         {
@@ -12,7 +12,7 @@ namespace Craiyon.Net.Tests
 
             try
             {
-                await craiyonService.Generate("Space man", "bruh.jpg");
+                await craiyonService.DownloadImageSpecificAsync("Space man", "specific.jpg");
             } catch(Exception e) {
                 Console.WriteLine(e.ToString());
             }
