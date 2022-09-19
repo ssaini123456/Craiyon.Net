@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json.Linq;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json;
@@ -20,11 +19,29 @@ namespace Craiyon.Net
         }
 
         /// <summary>
-        /// Craiyon is an AI based Image Generation Service that uses DALL-E.
+        ///     Craiyon is an AI based Image Generation Service that uses DALL-E.
         /// </summary>
         /// <param name="galleryIndex">The index within the image gallery you would like to download.</param>
         public CraiyonService([Optional] int galleryIndex) {
             _galleryIndex = galleryIndex;
+        }
+
+        /// <summary>
+        ///     Get the current gallery index
+        /// </summary>
+        /// <returns> The image index within the image gallery. </returns>
+        public int GetGalleryIndex()
+        {
+            return _galleryIndex;
+        }
+
+        /// <summary>
+        ///     Set the gallery index
+        /// </summary>
+        /// <param name="gIndex">The gallery index.</param>
+        public void SetGalleryIndex(int gIndex)
+        {
+            _galleryIndex = gIndex;
         }
 
         /// <summary>
@@ -74,30 +91,36 @@ namespace Craiyon.Net
         /// <param name="prompt">The prompt you would like craiyon to generate on.</param>
         /// <param name="path">The pat to save the image to.</param>
         /// <returns></returns>
-        public async Task DownloadGalleryAsync(string prompt)
+        public async Task DownloadGalleryAsync(string prompt, string folderPath)
         {
             if(prompt == null)
             {
                 throw new CraiyonInvalidPrompt();
             }
+
             var gallery = await Download(prompt);
+
+            // In the case where our path doesn't exist, create it.
+            if(!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
 
             for(int i = 0; i < GALLERY_MAX; i++)
             {
-                string path = $"{i}.jpg";
-
+                string path = $"{folderPath}/{i}.jpg";
                 var strippedImage = $"{gallery["images"][i]}";
+
                 await DataUrlToImageAsync(strippedImage, path);
             }
         }
 
         /// <summary>
-        ///     Download a specific image from the prompts image gallery.
+        ///     Download a specific image from the prompts image gallery provided an index.
         /// </summary>
         /// 
         /// <param name="prompt">The prompt you would like craiyon to generate on.</param>
         /// <param name="path">The pat to save the image to.</param>
-        /// 
         /// <exception cref="CraiyonCountOutOfBounds"></exception>
         /// <exception cref="CraiyonInvalidPrompt"></exception>
         public async Task DownloadImageSpecificAsync(string prompt, string path)

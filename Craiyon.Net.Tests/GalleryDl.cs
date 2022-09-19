@@ -2,18 +2,22 @@
 
 namespace Craiyon.Net.Tests
 {
-    public class ImageDl
+    public class GalleryDl
     {
         public static async Task Main(string[] args)
         {
-            
-            Console.WriteLine("Generating Image...");
-            var craiyonService = new CraiyonService(1); // Get the 2nd image within the image gallery.
+
+            Console.WriteLine("Give me a prompt to generate:");
+            string prompt = Console.ReadLine();
+
+            var craiyonService = new CraiyonService(); // Gallery index isn't needed if you are downloading the entire gallery.
 
             try
             {
-                await craiyonService.DownloadImageSpecificAsync("Space man", "specific.jpg");
-            } catch(Exception e) {
+                await craiyonService.DownloadGalleryAsync("Time and Space merging into one", "testFolder");
+            }
+            catch (Exception e)
+            {
                 Console.WriteLine(e.ToString());
             }
         }
