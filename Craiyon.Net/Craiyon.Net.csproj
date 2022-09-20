@@ -9,7 +9,7 @@
     <Copyright>Sutinder S. Saini</Copyright>
     <PackageProjectUrl>https://github.com/sa111n111/Craiyon.Net</PackageProjectUrl>
     <PackageIcon>icon.jpg</PackageIcon>
-    <PackageReadmeFile></PackageReadmeFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/sa111n111/Craiyon.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackAsTool>False</PackAsTool>
@@ -17,7 +17,7 @@
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Title>DotNetCraiyon</Title>
     <AssemblyName>DotNetCraiyon</AssemblyName>
-    <Version>2.0</Version>
+    <Version>2.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +26,10 @@
       <PackagePath>\</PackagePath>
     </None>
     <None Include="..\icon.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
