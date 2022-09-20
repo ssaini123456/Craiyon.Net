@@ -30,7 +30,7 @@ namespace Craiyon.Net.Tests
 
             try
             {
-                await craiyonService.DownloadGalleryAsync("Time and Space merging into one", "testFolder");
+                await craiyonService.DownloadGalleryAsync(prompt, "testFolder");
             }
             catch (Exception e)
             {
