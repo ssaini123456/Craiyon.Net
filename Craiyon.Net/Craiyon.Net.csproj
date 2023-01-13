@@ -7,10 +7,10 @@
     <Authors>Sutinder S</Authors>
     <Description>A .NET Wrapper over the Craiyon AI Image generation service.</Description>
     <Copyright>Sutinder S. Saini</Copyright>
-    <PackageProjectUrl>https://github.com/sa111n111/Craiyon.Net</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/xk0sm1c/Craiyon.Net</PackageProjectUrl>
     <PackageIcon>icon.jpg</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/sa111n111/Craiyon.Net</RepositoryUrl>
+    <RepositoryUrl>https://github.com/xk0sm1c/Craiyon.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackAsTool>False</PackAsTool>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
