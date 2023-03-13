@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Authors>Sutinder S</Authors>
+    <Authors>Sutinder S. Saini</Authors>
     <Description>A .NET Wrapper over the Craiyon AI Image generation service.</Description>
     <Copyright>Sutinder S. Saini</Copyright>
     <PackageProjectUrl>https://github.com/terrain123456/Craiyon.Net</PackageProjectUrl>
@@ -17,7 +17,7 @@
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <Title>DotNetCraiyon</Title>
     <AssemblyName>DotNetCraiyon</AssemblyName>
-    <Version>2.0.2</Version>
+    <Version>3.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
